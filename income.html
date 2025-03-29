@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CESPAY - Digital Payment</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <style>
+      .stylechangeli{
+        font-size: smaller;
+        font-weight: 600;
+        color: rgb(65 87 110 / 77%);
+        text-align: start;
+      }
+      .sidechanges{
+        background: white;
+        border-radius: 5px;
+        padding: 93px 93px;
+      }
+      .headfirst{
+        font-weight: 700;
+        color: rgb(0, 158, 92);
+        text-align: left;
+      }
+      .pchange{
+        font-size: small;
+        color: rgb(65 87 110 / 77%);
+        font-family: sans-serif;
+        font-weight: 600;
+        text-align: left;
+      }
+      .thisone{
+        padding: 10px;
+        color: #506493;
+        background: aliceblue;
+        border-radius: 3px;
+        margin: 10px 0px;
+        font-family: sans-serif;
+        font-weight: 600;
+        font-size: medium;
+        border: 1px solid #305eff9e;
+      }
+      .b{
+        background: #fff0f0;
+        border: 1px solid #ff30309e;
+      }
+      .paragraph{
+        font-size: medium;
+        color: rgb(65 87 110 / 77%);
+        font-family: sans-serif;
+        font-weight: 600;
+      }
+      b, strong {
+        font-weight: bolder;
+        background: #eef2ff;
+        padding: 5px;
+        border-radius: 5px;
+        font-size: smaller;
+      }
+     .checkone {
+       color: #ffffff;
+       background: #305eff;
+       font-family: sans-serif;
+       border-radius: 5px;
+       transition: all 0.2s ease-in;
+      }
+     .checkone:hover {
+       color: #305eff;
+       background: #ffffff;
+       border-radius: 5px;
+       border: 1px solid #305eff;
+      }
+     .diff{
+       margin: 50px 0px;
+      }
+  
+  @media (max-width: 575.98px) { 
+
+      .paragraph {
+        font-size: medium;
+        color: rgb(65 87 110 / 77%);
+        font-family: sans-serif;
+        font-weight: 600;
+        text-align: center;
+      }
+     
+      b, strong {
+        font-weight: bolder;
+        background: #eef2ff;
+        padding: 5px;
+        border-radius: 5px;
+        font-size: smaller;
+        text-align: center;
+      }
+      .hero-cta {
+        display: flex;
+        margin-top: 25px;
+        justify-content: center;
+        gap: 13px;
+      }
+      .btn-primary-custom {
+        background-color: var(--primary-color);
+        color: white;
+        padding: 9px 23px;
+        border-radius: 5px;
+        justify-content: center;
+        border: none;
+        gap: 22px;
+        font-weight: 500;
+        font-size: 1.1rem;
+        transition: all 0.3s ease;
+      }
+
+
+      .btnchange {
+        background: rgb(255 255 255);
+        color: #305eff;
+        border: none;
+        padding: 7px 20px;
+        border-radius: 25px;
+        box-shadow: 0px 1px 8px 1px #dddbff;
+      }
+      .diff{
+        margin: 19px 0px;
+      }
+      .hw{
+        padding: 10px;
+      }
+      #centerroww{
+        margin: 5px;
+      }
+  }
+
+    #nextchange{
+      background: #fbfcff;
+      padding: 50px;
+      border-radius: 5px;
+    }
+
+  .dropdown-toggle::after {
+    display: none;
+    margin-left: .255em;
+    vertical-align: .255em;
+    content: "";
+    border-top: .3em solid;
+    border-right: .3em solid transparent;
+    border-bottom: 0;
+    border-left: .3em solid transparent;
+}
+.dropdown-item {
+    display: block;
+    width: 100%;
+    padding: 7px 27px;
+    clear: both;
+    font-weight: 400;
+    color: var(--bs-dropdown-link-color);
+    text-align: inherit;
+    text-decoration: none;
+    white-space: nowrap;
+    background-color: transparent;
+    border: 0;
+    border-radius: var(--bs-dropdown-item-border-radius, 0);
+}
+p{
+    margin: 0px;
+    font-size: small;
+    color: rgb(65 87 110 / 77%);
+    font-family: sans-serif;
+    font-weight: 600;
+}
+.hw{
+    background: white;
+    padding: 33px;
+    border-radius: 10px;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    margin: 5px;
+
+}
+.hws{
+    background: white;
+    padding: 45px;
+    border-radius: 10px;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    margin: 5px;
+}
+.rowwidh{
+    padding: 16px 10px;
+    align-items: center;
+}
+input{
+  border: 1px solid #cdcdcd;
+    padding: 5px;
+    border-radius: 5px;
+    width: 100px;
+    text-align: center;
+    margin: 0px;
+    font-size: small;
+    color: rgb(65 87 110 / 77%);
+    font-family: sans-serif;
+    font-weight: 600;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+#centerroww{
+  justify-content: center;
+}
+.pchanges{
+        font-size: x-large;
+        color: rgb(65 87 110 / 77%);
+        font-family: sans-serif;
+      }
+    </style>
+</head>
+<body>
+
+    <!-- navbar -->
+    <header  class="main-header">
+        <nav  id="navbar-example2" class="navbar navbar-expand-lg">
+            <div class="container">
+                <a class="navbar-brand" href="#">
+                    <img src="images/cespaydesignlogo.png" alt="CESPAY Logo" class="logo">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav mx-auto">
+                        <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#about">About us</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#retailers">Retailers</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#features">Features</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#pricing">Pricing</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#contact">Contact us</a></li>
+                    </ul>
+                    <div class="nav-buttons">
+                        <button class="btn btn-retailer">Retailer</button>
+                        <button class="btn btn-distributor">Distributor</button>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header> 
+
+    <!-- income section -->
+     <section>
+        <div class="container mt-5">
+            <a href="index.html" style="text-decoration: none;"><b><i class="bi bi-arrow-left"></i> Back</b></a>
+            <h1 class="fw-bold text-primary text-center">Cespay Income Calculator</h1>
+            <p class="text-center">Change the number of transactions to calculate earnings.</p>
+            <div id="centerroww" class="row mt-4 mb-5">
+                <div class="col-lg-5 hw">
+                    <div class="row rowwidh">
+                      <div class="col"><p>Banking Services</p></div>
+                      <div class="col"><p>No. of Daily Transactions</p></div>
+                      <div class="col"><p>Income ₹</p></div>
+                    </div>
+                    <div class="row rowwidh">
+                        <div class="col">
+                                <p>Money Transfer</p>
+                        </div>
+                        <div class="col">
+                          <input type="number" oninput="this.value = this.value.slice(0,3);" onchange="calPerDay(0)" value="1" maxlength="3" onkeydown="if (/\D/g.test(this.value)) this.value = this.value.replace(/\D/g,'')" placeholder="Enter no.">
+                        </div>
+                        <div class="col">
+                                <p>₹ 22</p>  
+                        </div>
+                    </div>
+                    <div class="row rowwidh">
+                        <div class="col">
+                                <p>Aadhaar ATM – AePS</p>
+                        </div>
+                        <div class="col">
+                          <input type="number" oninput="this.value = this.value.slice(0,3);" value="1" maxlength="3" onchange="calPerDay(0)" onkeydown="if (/\D/g.test(this.value)) this.value = this.value.replace(/\D/g,'')" placeholder="Enter no.">
+                        </div>
+                        <div class="col">
+                                <p>₹ 7</p>  
+                        </div>
+                    </div>
+                    <div class="row rowwidh">
+                        <div class="col">
+                                <p>Micro ATM</p>
+                        </div>
+                        <div class="col">
+                          <input type="number" oninput="this.value = this.value.slice(0,3);" value="1" onchange="calPerDay(0)" maxlength="3" onkeydown="if (/\D/g.test(this.value)) this.value = this.value.replace(/\D/g,'')" placeholder="Enter no.">
+                        </div>
+                        <div class="col">
+                                <p>₹ 7</p>  
+                        </div>
+                    </div>
+                    <div class="row rowwidh">
+                        <div class="col">
+                                <p>Mini Statement</p>
+                        </div>
+                        <div class="col">
+                          <input type="number" oninput="this.value = this.value.slice(0,3);" value="1" onchange="calPerDay(0)" maxlength="3" onkeydown="if (/\D/g.test(this.value)) this.value = this.value.replace(/\D/g,'')" placeholder="Enter no.">
+                        </div>
+                        <div class="col">
+                                <p>₹ 0</p>  
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-5 hws">
+                  <div class="row">
+                    <div class="col">
+                       <p>
+                        Income Per Day
+                      </p>
+                    </div>
+                    <div style="visibility: hidden;" class="col">
+                      <h1>X</h1>
+                    </div>
+                    <div class="col">
+                        <p>
+                        Number of Days
+                      </p>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col">
+                      <h1>
+                        442
+                      </h1>
+                    </div>
+                    <div class="col">
+                      <h1>X</h1>
+                    </div>
+                    <div class="col">
+                       <h1>
+                        30
+                       </h1>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div>
+                      <img class="img-fluid" src="images/income.png" alt="">
+                    </div>
+                    <div class="col">
+                        <div>
+                          <h4>Total Income</h4>
+                        </div>
+                        <div>
+                          <h3 style="color: #305eff; font-weight: 600;">₹ 3,350<span class="pchanges"> /month</span></h3>
+                        </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col">
+                      <button class="btn btn-primary-custom" >Join CesPay</button>
+                    </div>
+                  </div>
+                </div>
+            </div>
+        </div>
+     </section>
+
+    <!-- footer section -->
+   <footer  class="bg-body-tertiary text-center">
+
+    <div class="container p-4">
+   
+      <section class="mb-4">
+        <!-- Facebook -->
+        <a data-mdb-ripple-init  class="btn btn-outline btn-floating m-1 btnchange" href="#" role="button"
+          ><i class="fab fa-facebook-f"></i
+        ></a>
+  
+        <!-- Twitter -->
+        <a data-mdb-ripple-init class="btn btn-outline btn-floating m-1 btnchange" href="#" role="button"
+          ><i class="fab fa-x-twitter"></i
+        ></a>
+  
+        <!-- Google -->
+        <a data-mdb-ripple-init class="btn btn-outline btn-floating m-1 btnchange" href="#" role="button"
+          ><i class="fab fa-google"></i
+        ></a>
+  
+        <!-- Instagram -->
+        <a data-mdb-ripple-init class="btn btn-outline btn-floating m-1 btnchange" href="#" role="button"
+          ><i class="fab fa-instagram"></i
+        ></a>
+  
+        <!-- Linkedin -->
+        <a data-mdb-ripple-init class="btn btn-outline btn-floating m-1 btnchange" href="#" role="button"
+          ><i class="fab fa-linkedin-in"></i
+        ></a>
+  
+      </section>
+    
+    
+      <section class="mb-4">
+        <p>
+            At CESPAY, we believe in the power of partnerships to drive mutual growth and success. Our Partner Services are designed to help businesses expand their reach, enhance their offerings, and tap into new opportunities. 
+        </p>
+      </section>
+      
+      <section class="">
+        
+        <div class="row">
+     
+          <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+            <h5 class="text-uppercase">Address</h5>
+  
+            <ul class="list-unstyled mb-0">
+              <li>
+                CES-INDIA,
+                    STPI Plot No.T-25, Block D, Chikalthana MIDC,
+                    Chhatrapati Sambhaji Nagar (Maharashtra)-431007.
+              </li>
+            </ul>
+          </div>
+         
+          <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+            <h5 class="text-uppercase">Useful Links</h5>
+  
+            <ul class="list-unstyled mb-0">
+              <li>
+                <a class="text-body" href="#">Home</a>
+              </li>
+              <li>
+                <a class="text-body" href="#">About us</a>
+              </li>
+              <li>
+                <a class="text-body" href="#">Services</a>
+              </li>
+              <li>
+                <a class="text-body" href="#">Contact us</a>
+              </li>
+            </ul>
+          </div>
+     
+          <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+            <h5 class="text-uppercase">Links</h5>
+  
+            <ul class="list-unstyled mb-0">
+              <li>
+                <a class="text-body" href="#">Retailers</a>
+              </li>
+              <li>
+                <a class="text-body" href="#">Corporate</a>
+              </li>
+              <li>
+                <a class="text-body" href="#">Features</a>
+              </li>
+              <li>
+                <a class="text-body" href="#">Pricing</a>
+              </li>
+            </ul>
+          </div>
+          
+          <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+            <h5 class="text-uppercase">Contact us</h5>
+  
+            <ul class="list-unstyled mb-0">
+              <li>
+                <a class="text-body" href="#">Email: support@cespay.in</a>
+              </li>
+              <li>
+                <a class="text-body" href="#">Phone: +91 9284560953</a>
+              </li>
+            </ul>
+          </div>
+          <!--Grid column-->
+        </div>
+        <!--Grid row-->
+      </section>
+      <!-- Section: Links -->
+    </div>
+     <div class="container">
+        <div class="row">
+            <hr>
+            <div class="col-lg-6 d-flex align-items-center justify-content-start">
+                <div class="policy">
+                    <a href="privacy.html">Privacy</a>
+                    <a href="termsandcondition.html">Terms of Services</a>
+                    <a href="grevience.html">Greviance and Redressal Policy</a>
+                    <a href="refund.html">Refund Policy</a>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="text-center p-3 policy">
+                    <span>© 2025 Copyright:</span>
+                    <a class="text-reset fw-bold" href="#">CES-INDIA. All Rights Reserved.</a>
+                  </div>
+            </div>
+        </div>
+     </div>
+    
+  </footer>
+
+  <!-- script here ... -->
+  <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
